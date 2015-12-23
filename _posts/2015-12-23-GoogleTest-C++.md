@@ -19,16 +19,7 @@ First of all we need to have install conan from pip2 doing:
 Now with conan installed we do not have to worry about installing **Google Test** in our system.
 
 Next step will be preparing the **conanfile.txt** to gather de dependencies:
-```
-[requires]
-gtest/1.7.0@lasote/stable
-
-[options]
-gtest:shared=True
-
-[generators]
-cmake
-```
+<script src="https://gist.github.com/maitesin/7938012180e0cf320a55.js"></script>
 
 Once we have conan ready we only need to run it to download the dependency and configure them to have them ready for
 CMake:

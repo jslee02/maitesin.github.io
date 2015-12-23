@@ -14,9 +14,7 @@ Because these technologies are widely use it in real projects.
 [repo](https://github.com/maitesin/blog/tree/master/google_test_2015_12_22) in GitHub.**
 #Step 1 Install conan, configure project and gather dependencies
 First of all we need to have install conan from pip2 doing:
-```bash
-pip2 install conan
-```
+<script src="https://gist.github.com/maitesin/d8d33eca7ceb3edcbef6.js"></script>
 
 Now with conan installed we do not have to worry about installing **Google Test** in our system.
 

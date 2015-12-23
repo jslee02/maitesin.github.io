@@ -61,3 +61,7 @@ This will generate an executable in the *bin* folder, and we will be able to run
 This will result with the following output:
 <script src="https://gist.github.com/maitesin/6f5d11514f8c389d3915.js"></script>
 
+#More advanced example
+These are the basics of how to use **Google Test** to create **unit test** for your application. In the website of the project there are plenty of more advanced examples.
+
+Finally, if you want to see how is used **Google Test** in one of my own project you can have a look to the repository [tries](https://github.com/maitesin/tries). For each of the three data structures (Trie, TST and Radix Tree) there are two folders: **lib** (where the source code of the data structure is stored) and **gtest** (where the unit test are stored).

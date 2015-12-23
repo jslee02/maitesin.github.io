@@ -15,6 +15,9 @@ One of my favourites projects is the Linux Kernel. Currently, I am doing the Eud
 ### Contact me
 
 [oscar.forner.martinez AT gmail.com](mailto:oscar.forner.martinez@gmail.com)
+
 [LinkedIn](https://uk.linkedin.com/in/oscarforner)
+
 [Twitter](https://twitter.com/oscar_forner)
+
 [GitHub](https://github.com/maitesin)

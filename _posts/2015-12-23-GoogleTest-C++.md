@@ -23,120 +23,41 @@ Next step will be preparing the **conanfile.txt** to gather de dependencies:
 
 Once we have conan ready we only need to run it to download the dependency and configure them to have them ready for
 CMake:
-```bash
-conan install .
-```
+<script src="https://gist.github.com/maitesin/81ac8f571bacd69bd718.js"></script>
 This will output something similar to:
-```
-WARN: Migration: Updating settings.yml with new gcc versions
-Requirements
-    gtest/1.7.0@lasote/stable
-    Package for gtest/1.7.0@lasote/stable in
-    /home/maitesin/.conan/data/gtest/1.7.0/lasote/stable/package/ca89189bc59ff53842d6beea76549f289b7b88bd
-    Generated conaninfo.txt
-    Generated conanbuildinfo.cmake
-    ```
+<script src="https://gist.github.com/maitesin/3714993e356504563c91.js"></script>
 
 #Step 2 configuring CMake
 The configuration will be done in the **CMakeLists.txt** file:
-```
-project(Google_test_example)
-cmake_minimum_required(VERSION 2.8)
-
-include(conanbuildinfo.cmake)
-CONAN_BASIC_SETUP()
-
-INCLUDE_DIRECTORIES(src)
-ADD_EXECUTABLE(run_test src/test.cpp)
-TARGET_LINK_LIBRARIES(run_test ${CONAN_LIBS})
-```
+<script src="https://gist.github.com/maitesin/2c1b975085281d016e9d.js"></script>
 
 #Step 3 code and unit test
 The code will be held in the **src** folder. It will contain two files: *functions.h* and *test.cpp*.
 
 The function(s) we want to test will be in the header file *function.h*:
-```c
-int int_addition(int a, int b) {
-            int c = a + b;
-            return c;
-}
-```
+<script src="https://gist.github.com/maitesin/224e6c2814c2f3ebdee6.js"></script>
+
 
 The test(s) we want to run will be in the source file *test.cpp*:
-```c
-#include "gtest/gtest.h"
-#include "functions.h"
+<script src="https://gist.github.com/maitesin/2c1c3e121c45c9950c69.js"></script>
 
-TEST(IntAddition, Negative) {
-            EXPECT_EQ(-5, int_addition(-2, -3)) << "This will be shown in case it fails";
-            EXPECT_EQ(-3, int_addition(5, -8));
-}
-
-TEST(IntAddition, Positive) {
-            EXPECT_EQ(4, int_addition(1, 3));
-            EXPECT_EQ(9, int_addition(4, 5));
-}
-
-int main(int argc, char **argv) {
-            testing::InitGoogleTest(&argc, argv);
-            return RUN_ALL_TESTS();
-}
-```
 #Step 4 putting all together
 What is left to do is actually build the project and run the test. In order to do this we need to run:
-```bash
-cmake .
-```
+<script src="https://gist.github.com/maitesin/8b1498ae67bf305c6ede.js"></script>
+
 This will output something similar to:
-```
--- The C compiler identification is GNU 5.3.0
--- The CXX compiler identification is GNU 5.3.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Configuring done
--- Generating done
--- Build files have been written to: /home/maitesin/workspace/blog/google_test_2015_12_22
-```
+<script src="https://gist.github.com/maitesin/358be24668b54d1f22a4.js"></script>
 
 There will be now a **Makefile** generated from **CMake** with everything ready to compile and link all the sources and
 dependencies together.
-```bash
-make
-```
-This will output something like:
-```
-Scanning dependencies of target run_test
-[ 50%] Building CXX object CMakeFiles/run_test.dir/src/test.cpp.o
-[100%] Linking CXX executable bin/run_test
-[100%] Built target run_test
-```
-This will generate an executable in the *bin* folder, and we will be able to run them with the command:
-```bash
-./bin/run_test
-```
-This will result with the following output:
-```
-[==========] Running 2 tests from 1 test case.
-[----------] Global test environment set-up.
-[----------] 2 tests from IntAddition
-[ RUN      ] IntAddition.Negative
-[       OK ] IntAddition.Negative (0 ms)
-[ RUN      ] IntAddition.Positive
-[       OK ] IntAddition.Positive (0 ms)
-[----------] 2 tests from IntAddition (0 ms total)
+<script src="https://gist.github.com/maitesin/72bf69c72b4877f6de4e.js"></script>
 
-[----------] Global test environment tear-down
-[==========] 2 tests from 1 test case ran. (0 ms total)
-[  PASSED  ] 2 tests.
-```
+This will output something like:
+<script src="https://gist.github.com/maitesin/80a9faf26be9d3a1901d.js"></script>
+
+This will generate an executable in the *bin* folder, and we will be able to run them with the command:
+<script src="https://gist.github.com/maitesin/dd4cc2237a83a0776f0d.js"></script>
+
+This will result with the following output:
+<script src="https://gist.github.com/maitesin/6f5d11514f8c389d3915.js"></script>
 

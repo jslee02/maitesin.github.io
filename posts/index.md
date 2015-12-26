@@ -4,4 +4,6 @@ title: All Posts
 excerpt: "A List of Posts"
 image:
   feature: background.jpg
+  credit: WeGraphics
+  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---

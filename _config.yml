@@ -1,13 +1,13 @@
 # Site wide configuration
 
-title:            GNU/Linux, Open Source, Algorithms, Data Structures, Linux Kernel, Security and More
+title:            Oscar Forner personal website
 locale:           en_GB
 url:		  http://maitesin.github.io/
 
 
 # Jekyll configuration
 
-permalink:   /:title/ #/:categories/:title/
+permalink:   :title/ #/:categories/:title/
 markdown:    kramdown
 highlighter: pygments
 sass:

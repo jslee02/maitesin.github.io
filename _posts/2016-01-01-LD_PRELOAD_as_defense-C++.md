@@ -5,7 +5,9 @@ title: Using LD_PRELOAD as defense from unsecure library calls
 
 I have seen LD_PRELOAD used in several cases. From using it to *allow programs that links to a newer version of the libstdc++*, to *cracks for applications that hijack some calls and provide the expected result to tell the application they have a valid license*.
 
+
 **The aim of this post is to show how to find these dangerous calls in applications you are running but fix them (i.e. you do not have access to the source code).** Imagine that one of these applications uses the library call *strcpy* as we know that call is dangerous and we have more secure alternatives such as *strncpy*.
+
 
 **All the code used for this entry is available in this [repo](https://github.com/maitesin/blog/ld_preload_2016_01_01)**
 
@@ -34,7 +36,7 @@ Now we have to compile it as a shared object (library to link):
 
 ##Using LD_PRELOAD to call our *strcpy*
 LD_PRELOAD will be used to load out *strcpy* instead of the one provided by the standard library.
-<script src="https://gist.github.com/maitesin/8d81d78f0348b56105ef.js"></script>i
+<script src="https://gist.github.com/maitesin/8d81d78f0348b56105ef.js"></script>
 
 Note that only copies up to the first 512 characters of the string s2.
 

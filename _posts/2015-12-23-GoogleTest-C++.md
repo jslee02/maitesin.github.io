@@ -10,7 +10,7 @@ to configure the project and build. Furthermore, for the **dependency manager** 
 Before starting, why use a **dependency manager** such as conan or software to configure and build such as **CMake**?
 Because these technologies are widely use it in real projects.
 
-**All the code and configuration files used for this entry are available in this
+**All the code and configuration files used in this post are available in this
 [repo](https://github.com/maitesin/blog/tree/master/google_test_2015_12_22) in GitHub.**
 #Step 1 Install conan, configure project and gather dependencies
 First of all we need to have install conan from pip2 doing:

@@ -5,7 +5,7 @@ title: Using LD_PRELOAD as defense from unsecure library calls
 
 I have seen LD_PRELOAD used in several cases. From using it to *allow programs that link to a newer version of the libstdc++*, to *cracks for applications that hijack some calls and provide the expected result to tell the application they have a valid license*.
 
-**The aim of this post is to show how to find these dangerous calls in applications that you are running which you cannot fix (i.e. you do not have access to the source code).** Imagine that one of these applications uses the library call *strcpy* as we know that call is dangerous and we have more secure alternatives such as *strncpy*.
+**The aim of this post is to show how to find these dangerous calls in applications that you are running which you cannot fix (i.e. you do not have access to the source code).** Imagine that one of these applications uses the library call *strcpy*, as we know that call is dangerous and we have more secure alternatives such as *strncpy*.
 
 **All the code used in this post is available in this [repo](https://github.com/maitesin/blog/ld_preload_2016_01_01)**
 
@@ -14,7 +14,7 @@ As an example of these applications I will use the following code:
 
 <script src="https://gist.github.com/maitesin/de99f58fbe1ea5f08e4b.js"></script>
 
-As you can imagine, we will have problems if the user gives a string longer than 512 characters, because it will
+As you can imagine, we will have problems if the user gives a string longer than 512 characters to the application because it will
 override more than just the string. Actually, it can even be an entry point for an exploit (it depends on the compiling flags).
 
 <script src="https://gist.github.com/maitesin/94bf40572e6bdc297f08.js"></script>

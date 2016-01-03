@@ -7,7 +7,7 @@ I have seen LD_PRELOAD used in several cases. From using it to *allow programs t
 
 **The aim of this post is to show how to find these dangerous calls in applications that you are running which you cannot fix (i.e. you do not have access to the source code).** Imagine that one of these applications uses the library call *strcpy*, as we know that call is dangerous and we have more secure alternatives such as *strncpy*.
 
-**All the code used in this post is available in this [repo](https://github.com/maitesin/blog/ld_preload_2016_01_01)**
+**All the code used in this post is available in this [repo](https://github.com/maitesin/blog/tree/master/ld_preload_2016_01_01/src)**
 
 As an example of these applications I will use the following code:
 <script src="https://gist.github.com/maitesin/ff9489767218d3c55a95.js"></script>

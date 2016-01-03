@@ -14,7 +14,7 @@ As an example of these applications I will use the following code:
 
 <script src="https://gist.github.com/maitesin/de99f58fbe1ea5f08e4b.js"></script>
 
-As you can imagine, we will have problems if the user gives a string longer than 512 characters to the application because it will
+As you can imagine, we will have problems if the user gives a string longer than 511 characters to the application because it will
 override more than just the string. Actually, it can even be an entry point for an exploit (it depends on the compiling flags).
 
 <script src="https://gist.github.com/maitesin/94bf40572e6bdc297f08.js"></script>
@@ -36,7 +36,7 @@ Now we have to compile it as a shared object (library to link):
 LD_PRELOAD will be used to load out *strcpy* instead of the one provided by the standard library.
 <script src="https://gist.github.com/maitesin/8d81d78f0348b56105ef.js"></script>
 
-Note that it only copies up to the first 512 characters of the string s2.
+Note that it only copies up to the first 511 characters of the string s2.
 
 #Conclusion
 I want to point out the versatility of the LD_PRELOAD, for example think about how can this help mitigate a 0-day exploit until the code is fixed.

@@ -15,6 +15,7 @@ The videos are made with **[asciinema](https://asciinema.org/)** that means **yo
 
 #The basics of Cling
 In this section I will show the basic commands we can run on cling besides C/C++ code.
+
 Command | Explanation
 --------|------------
 .I *path* | to add includes. Like -I option at compiling

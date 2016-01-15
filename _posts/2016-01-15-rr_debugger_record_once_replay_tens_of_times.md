@@ -1,6 +1,6 @@
 ---
 layout: post
-title: rr debugger: record once, replay tens of times
+title: rr debugger\: record once, replay tens of times
 ---
 
 **rr** is a debugging tool from Mozilla that **enhances the behaviour of GDB**. It can be found in

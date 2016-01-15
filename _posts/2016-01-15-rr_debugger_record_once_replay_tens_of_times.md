@@ -17,6 +17,7 @@ The videos are made with **[asciinema](https://asciinema.org/)**, that means **y
 It is recommended to have your CPU frequency governor in 'performance' mode instead of 'powersave'. Because of that is recommended to set it:
 <script src="https://gist.github.com/maitesin/93a7e3ad10d8afba3529.js"></script>
 
+
 To set it back to 'powersave' move just run:
 <script src="https://gist.github.com/maitesin/83cadbdedf5e3a6925a2.js"></script>
 
@@ -28,6 +29,7 @@ To set it back to 'powersave' move just run:
 #Example og usage
 In this example I will use the following code:
 <script src="https://gist.github.com/maitesin/efdbc9067edb3d5871e3.js"></script>
+
 
 It will be compiled with the *-g* to produce debugging information as you would do for **GDB**:
 <script src="https://gist.github.com/maitesin/fd19939785d85babda39.js"></script>

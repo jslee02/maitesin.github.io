@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Using LD_PRELOAD as defense from unsecure library calls 
+category: Linux
+tags: [Security, Linux]
 ---
 
 I have seen LD_PRELOAD used in several cases. From using it to *allow programs that link to a newer version of the libstdc++*, to *cracks for applications that hijack some calls and provide the expected result to tell the application they have a valid license*.

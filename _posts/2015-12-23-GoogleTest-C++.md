@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Unit test with Google Test for C++ (Improved version)
+category: Dev
+tags: [C++, Google Test, Unit Test]
 ---
 
 **Google Test** is one of the available Frameworks to create **unit test** for C++. In this example I will use **CMake**

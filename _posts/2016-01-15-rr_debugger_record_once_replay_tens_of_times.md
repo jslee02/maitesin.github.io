@@ -1,6 +1,8 @@
 ---
 layout: post
 title: rr debugger, record once, replay tens of times
+category: Dev
+tags: [C, C++, Debugger, rr, GDB]
 ---
 
 **rr** is a debugging tool from Mozilla that **enhances the behaviour of GDB**. It can be found in

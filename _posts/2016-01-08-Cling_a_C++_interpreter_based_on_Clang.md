@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Cling a C++ interpreter based on Clang 
+category: Dev
+tags: [C++, Clang, Interpreter]
 ---
 
 **Cling is an interactive C++ interpreter**, built on top of Clang and LLVM compiler infrastructure. It can be found in

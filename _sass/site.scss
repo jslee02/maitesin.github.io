@@ -70,3 +70,50 @@
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a {
 	@include transition(all .2s ease);
 }
+
+/* Category List */
+/*.related {
+padding-top: 2rem;
+padding-bottom: 2rem;
+border-top: 1px solid #eee;
+}*/
+.category-list {
+    padding-left: 1rem;
+    list-style: none;
+}
+.category-list h3 {
+    font-size: 1rem;
+    margin-top: 0;
+}
+.category-list li small {
+    font-size: 75%;
+    color: #999;
+}
+.category-list li a:hover {
+    color: #6a9fb5;
+    text-decoration: none;
+}
+.category-list li a:hover small {
+    color: inherit;
+}
+
+.category-mark {
+    padding: 0 .5rem 0 .5rem;
+    border-radius: 5px;
+    background: #f0f0f0;
+    color: #999;
+    text-decoration: none;
+    margin-bottom: .75rem;
+}
+
+.category-mark:hover {
+    font-weight: bold;
+}
+
+.tag-mark{
+    font-size: 75%;
+    padding: 0 .5rem 0 .5rem;
+    border-radius: 5px;
+    background: #e7f2f7;
+    color: #6a9fb5;
+}

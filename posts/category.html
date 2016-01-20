@@ -37,9 +37,9 @@ The following part removes dulpicated categories and invalid categories like bla
 The purpose of this snippet is to list all the categories you have in your site.
 =======================
 {% endcomment %}
-{% for category in tags %}
-    <a href="#{{ category | slugify }}"> {{ category }} </a>
-{% endfor %}
+<i><b>{% for category in tags %}
+    <a href="#{{ category | slugify }}"> <u>{{ category }}</u> </a>
+{% endfor %}</b></i>
 <h2>Relation of posts with specific category</h2>
 {% comment %}
 =======================

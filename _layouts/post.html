@@ -39,10 +39,8 @@
       {% else %}
         <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
       {% endif %}
-        {% for tag in page.tags %}
-                <span class="tag-mark">{{ tag }}</span>
-        {% endfor %}
-    </div><!--/ .headline-wrap -->
+      <p>Category: {% page.category %}; Tags: {% for tag in page.tags %} {{ tag }} {% endfor %}</p>
+      </div><!--/ .headline-wrap -->
     <div class="article-wrap">
       {{ content }}
       <hr />

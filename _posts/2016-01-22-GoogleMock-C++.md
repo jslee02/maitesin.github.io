@@ -45,4 +45,4 @@ The execution of the test will be the following:
 <script src="https://gist.github.com/maitesin/70e1d164d358cb786d52.js"></script>
 
 #Conclusion
-**Google Mock** or any mocking framework is an important tool for developers because **it allows you to create unit tests for interoperability of different objects**. Furthermore, you can create **unit tests** that are focused on a single class without worring if the class to which depends is working properly.
+**Google Mock**, or any mocking framework, is an important tool for developers because **it allows to create unit tests for interoperability of different objects**. Furthermore, you can create **unit tests** that are focused on a single class without worring if the class to which it depends is working properly.

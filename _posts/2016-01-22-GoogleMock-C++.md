@@ -27,7 +27,7 @@ In this case we want to create unit test for the *Consumer* class, but we need t
 The following unit test is written using the **Google Mock** framework:
 <script src="https://gist.github.com/maitesin/6ec71be17fde199e4ab3.js"></script>
 
-On the first hand, the *ProducerMock* class. It is inheriting from the *Producer* class. However, the interesting part is about
+On the first hand, the *ProducerMock* class. It is inheriting from the *Producer* class. However, the interesting part is
 <script src="https://gist.github.com/maitesin/f37c379a6735e719dcd5.js"></script>
 The live above is telling **Google Mock** to mock the method *getDomainFromUrl* from the *Producer* class and It will receive a *const std::string* by reference as parameter and It will return a *std::string* by value.
 

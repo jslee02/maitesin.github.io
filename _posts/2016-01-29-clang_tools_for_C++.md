@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Clang tools: clang-format, clang-tidy and clang-modernize 
+title: Clang tools clang-format, clang-tidy and clang-modernize 
 category: Dev
 tags: [C, C++, Clang]
 ---

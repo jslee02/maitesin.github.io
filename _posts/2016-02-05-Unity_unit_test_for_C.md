@@ -21,7 +21,7 @@ tags: [C, Unity, Unit Test]
 In the root of the project we have the **CMakeLists.txt** file and three folders: *lib*, *src* and *unittest*.
 
  * *lib*: Contains the **Unity** files.
- * *src*: Contains the code we want to test. In this case a functions header file.
+ * *src*: Contains the code we want to test. In this case, a functions header file.
  * *unittest*: Contains the test we want to run.
 <script src="https://gist.github.com/maitesin/3cb2890c4684f6651446.js"></script>
 
@@ -37,4 +37,4 @@ Finally, the **unit test**:
 As you can see in the code above, you need a main in the **unit test** file that contains: *UNITY_BEGIN* and *UNITY_END* calls and a *RUN_TEST* call for each test we want to run.
 
 #Conclusion
-**Everybody should be doing unit test, does not matter what language do they use**. I do use this framework among others (that I will introduce in future post) for testing C applications. **Unity** is a must have tool for any developer of C **even for embedded software** you can check it in their website and course.
+**Everybody should be doing unit tests, it does not matter what language do they use**. I do use this framework among others (that I will introduce in future posts) for testing C applications. **Unity** is a must have tool for any C developer, **even for embedded software**. You can check it in their website and course.

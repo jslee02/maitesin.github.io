@@ -2,7 +2,7 @@
 layout: post
 title: Unit test with Google Mock for C++
 category: Dev
-tags: [C++, Google Test, Google Mock, Unit Test]
+tags: [C++, Google Test, Google Mock, Unit Test, Mock]
 ---
 
 This post is a continuation from a previous post called [Unit test with Google Test for C++](http://maitesin.github.io//GoogleTest-C++/), but in this post we are going to use **Google Mock**, that extends the functionality of **Google Test**.

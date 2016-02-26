@@ -10,6 +10,7 @@ In this post I talk about three data structures I implemented to compare their p
 **All the code for the data structures as well as the tested scenarios are available in this [repo](https://github.com/maitesin/tries.git) in GitHub.**
 
 #Introduction
+
 What is a **prefix tree**? It is an **ordered** tree data structure that is used to store a dynamic set of elements where the key is a string. All the data structures that I implemented have the following methods:
 
 Operation|Description
@@ -25,6 +26,7 @@ keys|Returns a std::vector<std::string> with all the keys in the data structure 
 lcp|Returns the longest common prefix of all keys stored in the data structure.
 
 #Trie
+
 Unlike a binary search tree, none of the nodes in the tree stores the key associated with that node. Instead, **its position in the tree defines the key** with which it is associated. All the descendants of a node have a common prefix of the string associated with that node, and the root is associated with the empty string. Values are not necessarily associated with every node. Rather, **values tend only to be associated with leaves**, and with some inner nodes that correspond to keys of interest.
 
 Example of a **Trie** that contains the keys: "He", "Hello", "Kthulu", "No", "Wololo", "World", "Worst", "he":
@@ -32,6 +34,7 @@ Example of a **Trie** that contains the keys: "He", "Hello", "Kthulu", "No", "Wo
 ![Example of a trie](https://raw.githubusercontent.com/maitesin/tries/master/trie/trie.png)
 
 #Ternary Search Tree
+
 In a **Ternary Search Tree** nodes are arranged in a manner **similar to a binary search tree**, but with up to **three children** rather than the binary tree's limit of two. Like other prefix trees, a ternary search tree can be used as an **associative map structure with the ability for incremental string search**. However, ternary search trees are more **space efficient** compared to standard prefix trees, at the cost of speed.
 
 Example of a **Ternary Search Tree** that contains the keys: "He", "Hello", "Kthulu", "No", "Wololo", "World", "Worst", "he":
@@ -39,6 +42,7 @@ Example of a **Ternary Search Tree** that contains the keys: "He", "Hello", "Kth
 ![Example of a ternary search tree](https://raw.githubusercontent.com/maitesin/tries/master/TST/tst.png)
 
 #Radix Tree
+
 **Radix Tree** is a space-optimized **Trie** in which each node that is the **only child is merged with its parent**. The result is that the **number of children of every internal node is at least the radix *r*** of the radix trie, where *r* is a positive integer and a power *x* of 2, having *x* >= 1. Unlike in regular tries, **edges can be labeled with sequences of elements** as well as single elements. This makes radix trees much **more efficient for small sets** (especially if the strings are long) and for **sets of strings that share long prefixes**.
 
 Example of a **Radix Tree** that contains the keys: "He", "Hello", "Kthulu", "No", "Wololo", "World", "Worst", "he":
@@ -46,6 +50,7 @@ Example of a **Radix Tree** that contains the keys: "He", "Hello", "Kthulu", "No
 ![Example of a radix tree](https://raw.githubusercontent.com/maitesin/tries/master/Radix_Tree/radix.png)
 
 #Comparison
+
 In this section I show a comparison of the performance for the three data structures in different scenarios. **Note: sometimes the Trie runs out of memory. Therefore, there is no data on these cases.**
 
 ##Insert

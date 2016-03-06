@@ -15,7 +15,7 @@ As always, **all the code used in this post is available in this [repo](https://
 
 The videos are made with **[asciinema](https://asciinema.org/)**, that means **you can copy from the video**.
 
-#The basics of Cling
+# The basics of Cling
 In this section I will show the basic commands we can run on cling besides C/C++ code.
 
 Command | Explanation
@@ -25,10 +25,10 @@ Command | Explanation
 .rawInput | Toggle wrapping and printing the execution results of the input
 .help | Shows a nice help with these and other commands that can be used
 
-#Examples of usage
+# Examples of usage
 In this section examples of usage using the basics from the previous section will be shown.
 
-##Load an existing file with a function we want to test
+## Load an existing file with a function we want to test
 In this first example the following header will be loaded to use it:
 <script src="https://gist.github.com/maitesin/139f973bbb9498ab1c5e.js"></script>
 
@@ -36,7 +36,7 @@ The header above can be used from Cling as shown in the following video:
 <script type="text/javascript" src="https://asciinema.org/a/0tlo8e6kltl1lvqcrm8vz6pxr.js"
 id="asciicast-0tlo8e6kltl1lvqcrm8vz6pxr" async></script>
 
-##Include a folder and load a template class from that folder
+## Include a folder and load a template class from that folder
 This example will include a folder that contains a class that will be loaded from Cling:
 <script src="https://gist.github.com/maitesin/aeb80cf09bc090c856b0.js"></script>
 <script src="https://gist.github.com/maitesin/6ec0794b1d2a83646c81.js"></script>
@@ -45,12 +45,12 @@ The class above can be loaded from Cling as shown in the following video:
 <script type="text/javascript" src="https://asciinema.org/a/6dn649p755qhet4dr854vsclz.js"
 id="asciicast-6dn649p755qhet4dr854vsclz" async></script>
 
-##Write a function on-the-fly
+## Write a function on-the-fly
 Cling allows us to write functions or classes on-the-fly:
 <script type="text/javascript" src="https://asciinema.org/a/82i6wmeyjiyd2j6ohlhum0zm9.js"
 id="asciicast-82i6wmeyjiyd2j6ohlhum0zm9" async></script>
 
-#Conclusion
+# Conclusion
 I do not consider Cling as my main way to work in C/C++, but **it is my first option when I want to try something quick
 in a function or a class** that I am interested in using. It is not a perfect tool for everything, but it is faster than setting
 up a whole example when you are only interested in something specific.

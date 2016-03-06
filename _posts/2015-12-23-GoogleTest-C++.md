@@ -14,7 +14,7 @@ Because these technologies are widely use it in real projects.
 
 **All the code and configuration files used in this post are available in this
 [repo](https://github.com/maitesin/blog/tree/master/google_test_2015_12_22) in GitHub.**
-#Step 1 Install conan, configure project and gather dependencies
+# Step 1 Install conan, configure project and gather dependencies
 First of all we need to have install conan from pip2 doing:
 <script src="https://gist.github.com/maitesin/d8d33eca7ceb3edcbef6.js"></script>
 
@@ -29,11 +29,11 @@ CMake:
 This will output something similar to:
 <script src="https://gist.github.com/maitesin/3714993e356504563c91.js"></script>
 
-#Step 2 configuring CMake
+# Step 2 configuring CMake
 The configuration will be done in the **CMakeLists.txt** file:
 <script src="https://gist.github.com/maitesin/2c1b975085281d016e9d.js"></script>
 
-#Step 3 code and unit test
+# Step 3 code and unit test
 The code will be held in the **src** folder. It will contain two files: *functions.h* and *test.cpp*.
 
 The function(s) we want to test will be in the header file *function.h*:
@@ -43,7 +43,7 @@ The function(s) we want to test will be in the header file *function.h*:
 The test(s) we want to run will be in the source file *test.cpp*:
 <script src="https://gist.github.com/maitesin/2c1c3e121c45c9950c69.js"></script>
 
-#Step 4 putting all together
+# Step 4 putting all together
 What is left to do is actually build the project and run the test. In order to do this we need to run:
 <script src="https://gist.github.com/maitesin/8b1498ae67bf305c6ede.js"></script>
 
@@ -63,7 +63,7 @@ This will generate an executable in the *bin* folder, and we will be able to run
 This will result with the following output:
 <script src="https://gist.github.com/maitesin/6f5d11514f8c389d3915.js"></script>
 
-#More advanced example
+# More advanced example
 These are the basics of how to use **Google Test** to create **unit test** for your application. In the website of the project there are plenty of more advanced examples.
 
 Finally, if you want to see how is used **Google Test** in one of my own project you can have a look to the repository [tries](https://github.com/maitesin/tries). For each of the three data structures (Trie, TST and Radix Tree) there are two folders: **lib** (where the source code of the data structure is stored) and **gtest** (where the unit test are stored).

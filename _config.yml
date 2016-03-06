@@ -2,27 +2,42 @@
 
 title:            Oscar Forner's personal website
 locale:           en_GB
-url:		  http://maitesin.github.io/
+url:              #http://maitesin.github.io/
+
 
 
 # Jekyll configuration
 
 permalink:   /:title/ #/:categories/:title/
 markdown:    kramdown
-highlighter: pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
 gems:
   - jekyll-sitemap
+  - jekyll-gist
 
 kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: false
-  input: GFM
+  enable_coderay: false
+
+
+# Octopress
+
+# Default extensions
+post_ext: md
+page_ext: md
+
+# Found in _templates/
+post_layout: post
+page_layout: page
+
+# Format titles with titlecase?
+titlecase: true
 
 
 # Site owner
@@ -35,13 +50,13 @@ owner:
   twitter: oscar_forner
   facebook: #username
   google:
-    plus: ÒscarFornerMartínez 
+    plus: ÒscarFornerMartínez
     analytics: UA-71699232-1
     verify:
     ad-client:
     ad-slot:
   bing-verify:
-  github: maitesin 
+  github: maitesin
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: oscarforner
   xing: #username

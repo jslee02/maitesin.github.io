@@ -12,7 +12,7 @@ This post is a continuation from a previous post called [Unity; unit test for C]
 **All the code and configuration files used in this post are available in this [repo](https://github.com/maitesin/blog/tree/master/fff_mock_2016_02_18) in GitHub.**
 
 
-#Why do we need to mock functions?
+# Why do we need to mock functions?
 To answer that question I will introduce the signature of the two methods I will use during this post.
 
 The first function is called *modulo* and it will return 0 if the given number is even, 1 if it is an odd number:
@@ -27,7 +27,7 @@ Finally, the implementation of the *both_even* is the following:
 In this case we will use the *modulo* function to calculate *both_even*, but we do not have the implementation of *modulo*. This is intended because we do not want to use the actual code of the *modulo* function. We want to test **only the code in *both_even***. Therefore, the *modulo* function will be mocked.
 
 
-#Unit test with FFF
+# Unit test with FFF
 The following code is an example of 6 **unit tests** written using the **FFF** framework:
 <script src="https://gist.github.com/maitesin/67b9fdfe9ede1cc6aca5.js"></script>
 
@@ -46,5 +46,5 @@ The execution of the test will be the following:
 <script src="https://gist.github.com/maitesin/deb6e29d5d52fb1fa46c.js"></script>
 
 
-#Conclusion
+# Conclusion
 **FFF**, or any mocking framework, is an important tool for developers because **it allows to create unit tests for interoperability of different functions**. Furthermore, you can create **unit tests** that are focused on a single function without worring if the functions to which it depends are working properly.

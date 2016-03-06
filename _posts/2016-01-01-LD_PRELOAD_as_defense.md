@@ -21,26 +21,26 @@ override more than just the string. Actually, it can even be an entry point for 
 
 <script src="https://gist.github.com/maitesin/94bf40572e6bdc297f08.js"></script>
 
-#Find which dangerous calls are happenning in the application
+# Find which dangerous calls are happenning in the application
 To help us in this task we will use **ltrace**. Remember, we do not have access to the code.
 <script src="https://gist.github.com/maitesin/552c7fff34f4e494e0ff.js"></script>
 
 In the output above we can see that the call *strcpy* is used. It is dangerous, so we want to use the call *strncpy* instead.
 
-#Using a more secure call than *strcpy*
+# Using a more secure call than *strcpy*
 We can create our own version of the *strcpy* that actually calls *strncpy*:
 <script src="https://gist.github.com/maitesin/1271a761a0d7507b10a2.js"></script>
 
 Now we have to compile it as a shared object (library to link):
 <script src="https://gist.github.com/maitesin/9f499220972363936183.js"></script>
 
-#Using LD_PRELOAD to call our *strcpy*
+# Using LD_PRELOAD to call our *strcpy*
 LD_PRELOAD will be used to load out *strcpy* instead of the one provided by the standard library.
 <script src="https://gist.github.com/maitesin/8d81d78f0348b56105ef.js"></script>
 
 Note that it only copies up to the first 511 characters of the string s2.
 
-#Conclusion
+# Conclusion
 I want to point out the versatility of the LD_PRELOAD, for example think about how can this help mitigate a 0-day exploit until the code is fixed.
 
 This use of LD_PRELOAD is quite common in competitions like a [CTF](https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security) (in the attach/defense style) where you are provided with a server (with some services running) and you have to keep alive your services as much time as you can, but usually the services are an older version with known issues you need to patch on the fly ;)

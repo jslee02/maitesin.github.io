@@ -21,8 +21,8 @@ I think the code above is quite self-explanatory.
 As said before, this module is aimed to replace the current open syscall by ours, that will detect if the file we are trying to open is an mp3 or a jpg file and it will substitute the files by the ones provided when the module is loaded.
 
 ## Code explained
-<script src="https://gist.github.com/maitesin/461b74a13f1d1ca34cf6.js"></script>
 This could seem a bit overwhelming, but let's go through it.
+<script src="https://gist.github.com/maitesin/461b74a13f1d1ca34cf6.js"></script>
 
 Parameters provided to the module are declared and registered as follows:
 <script src="https://gist.github.com/maitesin/481eba1e505c92e27895.js"></script>

@@ -5,7 +5,7 @@ category: Linux Kernel
 tags: [C, Module, Linux Kernel]
 ---
 
-**NOTE: The code used to replace the user's path with the one provided is BAD. Don't do that at home kids**
+**NOTE: The code used to replace the user's path with the one provided is BAD, never change user's pointer content unless he/she is expecting that to happen. Don't do that at home kids**
 
 I decided to explain the basics of a **Linux Kernel Module** with humor. I am not saying this is a good idea for April's fool, but it is quite close ;)
 

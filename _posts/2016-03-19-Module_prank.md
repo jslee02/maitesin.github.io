@@ -5,6 +5,8 @@ category: Linux Kernel
 tags: [C, Module, Linux Kernel]
 ---
 
+**NOTE: The code used to replace the user's path with the one provided is BAD. Don't do that at home kids**
+
 I decided to explain the basics of a **Linux Kernel Module** with humor. I am not saying this is a good idea for April's fool, but it is quite close ;)
 
 This module shares some ideas with the post about [LD_PRELOAD](http://maitesin.github.io//LD_PRELOAD_as_defense/), but this time it is not to defend ourselves. **The module will replace the open syscall for our own where it will detect if we are opening an mp3 or a jpg file**. This idea was taken from [this talk of Julia Evans](https://www.youtube.com/watch?v=0IQlpFWTFbM).

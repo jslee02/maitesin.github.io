@@ -17,9 +17,9 @@ I do not explain all the options for capturing or specifying return types. There
 
 # Basics of the lambda expression
 The following is the smallest **lambda expression** with its three parts:
-- **[]**: capture.
-- **()**: parameters.
-- **{}**: body.
+- []: capture.
+- (): parameters.
+- {}: body.
 <script src="https://gist.github.com/maitesin/888fa96e4c331375e21a766f6ca3b0cf.js"></script>
 
 The following **lambda expression** increments by one the parameter.

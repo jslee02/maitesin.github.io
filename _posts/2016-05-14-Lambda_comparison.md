@@ -17,9 +17,10 @@ I do not explain all the options for capturing or specifying return types. There
 
 # Basics of the lambda expression
 The following is the smallest **lambda expression** with its three parts:
-- []: capture.
-- (): parameters.
-- {}: body.
+
+- **[]**: capture.
+- **()**: parameters.
+- **{}**: body.
 <script src="https://gist.github.com/maitesin/888fa96e4c331375e21a766f6ca3b0cf.js"></script>
 
 The following **lambda expression** increments by one the parameter.
@@ -36,6 +37,7 @@ The result of the execution of the previous code is:
 
 # What has been added in C++14
 In **C++14** two new features were added to **lambda expressions**:
+
 - **Initialization captures**: A capture with an initializer acts as if it declares and explicitly captures a variable declared with type auto, whose declarative region is the body of the **lambda expression**.[^2]
 - **Generic lambda expressions**: Until **C++14** parameters of a **lambda expression** should be of a specific type. Now, **lambda expressions** accept **auto** as a valid parameter type.
 
@@ -53,6 +55,7 @@ The result of the execution of the previous code is:
 
 # What will be added in C++17
 The current plan is to add two new features for **lambda expressions** in **C++17**:
+
 - **Capture &lowast;this**: This will allow the **lambda expression** to capture the **enclosing object by copy**. This will make possible to use safely the **lambda expression** even after the **enclosing object** has been destroyed.
 - **constexpr lambda expressions**: This will allow to call **lambda expressions** and use their result to generate ***constexpr*** objects **at compile time**.
 

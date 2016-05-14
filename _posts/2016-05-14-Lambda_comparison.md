@@ -11,15 +11,15 @@ In this post I talk about what has been added in the **C++ standard** regarding 
 [repo](https://github.com/maitesin/blog/tree/master/lambda_comparison_2016_05_14) in GitHub.**
 
 # What is a lambda expression?
-A **lambda expression** is a simplified notation for defining and using an anonymous function object. Instead of defining a named class with an *operator()*, later making an object of that class and finally invoking it.<sub>1</sub>
+A **lambda expression** is a simplified notation for defining and using an anonymous function object. Instead of defining a named class with an *operator()*, later making an object of that class and finally invoking it.[^1]
 
 I do not explain all the options for capturing or specifying return types. There is plenty of material regarding this topics. I focus on what has been introduced in **C++14** and what will be introduced in **C++17**.
 
 # Basics of lambda expression
 The following is the smalles **lambda expression** with its three parts:
-* **[]**: capture.
-* **()**: parameters.
-* **{}**: body.
+- **[]**: capture.
+- **()**: parameters.
+- **{}**: body.
 <script src="https://gist.github.com/maitesin/888fa96e4c331375e21a766f6ca3b0cf.js"></script>
 
 The following **lambda expression** increments by one the parameter.
@@ -34,10 +34,10 @@ The following **lambda expression** shows the difference between capturing by va
 The result of the execution of the previous code is:
 <script src="https://gist.github.com/maitesin/e6a65920d2e238a908f34174f4537743.js"></script>
 
-#What has been added in C++14
+# What has been added in C++14
 In **C++14** two new features were added to **lambda expressions**:
-* **Initialization captures**: A capture with an initializer acts as if it declares and explicitly captures a variable declared with type auto, whose declarative region is the body of the **lambda expression**.<sub>2</sub>
-* **Generic lambda expressions**: Until **C++14** parameters of a **lambda expression** should be from a specific type. Now, **lambda expressions** accept **auto** as a valid parameter type.
+- **Initialization captures**: A capture with an initializer acts as if it declares and explicitly captures a variable declared with type auto, whose declarative region is the body of the **lambda expression**.[^2]
+- **Generic lambda expressions**: Until **C++14** parameters of a **lambda expression** should be from a specific type. Now, **lambda expressions** accept **auto** as a valid parameter type.
 
 Example of the **initialization captures**:
 <script src="https://gist.github.com/maitesin/53cf0003e3376146e917cce0422b0330.js"></script>
@@ -51,10 +51,10 @@ Example of a **generic lambda expression**:
 The result of the execution of the previous code is:
 <script src="https://gist.github.com/maitesin/ff9542b04599b35cc5a4ec303818eb7d.js"></script>
 
-#What will be added in C++17
+# What will be added in C++17
 The current plan is to add two new features for **lambda expressions** in **C++17**:
-* **Capture &lowast;this**: This will allow the **lambda expression** to capture the **enclosing object by copy**. This will make possible to use the safely the **lambda expression** even after the **enclosing object** has been destroyed.
-* **constexpr lambda expressions**: This will allow to call **lambda expressions** and use their result to generate ***constexpr*** objects **at compile time**.
+- **Capture &lowast;this**: This will allow the **lambda expression** to capture the **enclosing object by copy**. This will make possible to use the safely the **lambda expression** even after the **enclosing object** has been destroyed.
+- **constexpr lambda expressions**: This will allow to call **lambda expressions** and use their result to generate ***constexpr*** objects **at compile time**.
 
 Sadly neither [GCC](https://gcc.gnu.org/projects/cxx-status.html#cxx1z) or [Clang](http://clang.llvm.org/cxx_status.html) supports them in any stable version. Therefore, **there will not be any execution of code, but there is some code that should work once the features are implemented**. The information used to do the code of this section has been found in the [C++ reference website](http://en.cppreference.com/w/cpp/language/lambda) and in [the paper for constexpr lambda expressions](https://isocpp.org/files/papers/N4487.pdf).
 
@@ -66,5 +66,5 @@ The following is an example of the **constexpr lambda expression**:
 
 **Note**: Once **GCC** or **Clang** support these features I will try the code above and I will ammend it if necessary.
 
-1: Definition extracted from the book **The C++ Programming Language (Fourth Edition)**.
-2: Definition extracted from the website [cppreference.com](http://en.cppreference.com/w/cpp/language/lambda).
+[^1]: Definition extracted from the book **The C++ Programming Language (Fourth Edition)**.
+[^2]: Definition extracted from the website [cppreference.com](http://en.cppreference.com/w/cpp/language/lambda).

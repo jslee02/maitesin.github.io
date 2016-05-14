@@ -17,9 +17,9 @@ I do not explain all the options for capturing or specifying return types. There
 
 # Basics of lambda expression
 The following is the smalles **lambda expression** with its three parts:
- - **[]**: capture.
- - **()**: parameters.
- - **{}**: body.
+1. **[]**: capture.
+2. **()**: parameters.
+3. **{}**: body.
 <script src="https://gist.github.com/maitesin/888fa96e4c331375e21a766f6ca3b0cf.js"></script>
 
 The following **lambda expression** increments by one the parameter.
@@ -36,8 +36,8 @@ The result of the execution of the previous code is:
 
 # What has been added in C++14
 In **C++14** two new features were added to **lambda expressions**:
- - **Initialization captures**: A capture with an initializer acts as if it declares and explicitly captures a variable declared with type auto, whose declarative region is the body of the **lambda expression**.[^2]
- - **Generic lambda expressions**: Until **C++14** parameters of a **lambda expression** should be from a specific type. Now, **lambda expressions** accept **auto** as a valid parameter type.
+1. **Initialization captures**: A capture with an initializer acts as if it declares and explicitly captures a variable declared with type auto, whose declarative region is the body of the **lambda expression**.[^2]
+2. **Generic lambda expressions**: Until **C++14** parameters of a **lambda expression** should be from a specific type. Now, **lambda expressions** accept **auto** as a valid parameter type.
 
 Example of the **initialization captures**:
 <script src="https://gist.github.com/maitesin/53cf0003e3376146e917cce0422b0330.js"></script>
@@ -53,8 +53,8 @@ The result of the execution of the previous code is:
 
 # What will be added in C++17
 The current plan is to add two new features for **lambda expressions** in **C++17**:
- - **Capture &lowast;this**: This will allow the **lambda expression** to capture the **enclosing object by copy**. This will make possible to use the safely the **lambda expression** even after the **enclosing object** has been destroyed.
- - **constexpr lambda expressions**: This will allow to call **lambda expressions** and use their result to generate ***constexpr*** objects **at compile time**.
+1. **Capture &lowast;this**: This will allow the **lambda expression** to capture the **enclosing object by copy**. This will make possible to use the safely the **lambda expression** even after the **enclosing object** has been destroyed.
+2. **constexpr lambda expressions**: This will allow to call **lambda expressions** and use their result to generate ***constexpr*** objects **at compile time**.
 
 Sadly neither [GCC](https://gcc.gnu.org/projects/cxx-status.html#cxx1z) or [Clang](http://clang.llvm.org/cxx_status.html) supports them in any stable version. Therefore, **there will not be any execution of code, but there is some code that should work once the features are implemented**. The information used to do the code of this section has been found in the [C++ reference website](http://en.cppreference.com/w/cpp/language/lambda) and in [the paper for constexpr lambda expressions](https://isocpp.org/files/papers/N4487.pdf).
 

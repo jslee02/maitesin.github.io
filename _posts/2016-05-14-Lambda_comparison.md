@@ -13,10 +13,10 @@ In this post I talk about what has been added in the **C++ standard** regarding 
 # What is a lambda expression?
 A **lambda expression** is a simplified notation for defining and using an anonymous function object. Instead of defining a named class with an *operator()*, later making an object of that class and finally invoking it.[^1]
 
-I do not explain all the options for capturing or specifying return types. There is plenty of material regarding this topics. I focus on what has been introduced in **C++14** and what will be introduced in **C++17**.
+I do not explain all the options for capturing or specifying return types. There is plenty of material regarding these topics. I focus on what has been introduced in **C++14** and what will be introduced in **C++17**.
 
-# Basics of lambda expression
-The following is the smalles **lambda expression** with its three parts:
+# Basics of the lambda expression
+The following is the smallest **lambda expression** with its three parts:
 - **[]**: capture.
 - **()**: parameters.
 - **{}**: body.
@@ -37,7 +37,7 @@ The result of the execution of the previous code is:
 # What has been added in C++14
 In **C++14** two new features were added to **lambda expressions**:
 - **Initialization captures**: A capture with an initializer acts as if it declares and explicitly captures a variable declared with type auto, whose declarative region is the body of the **lambda expression**.[^2]
-- **Generic lambda expressions**: Until **C++14** parameters of a **lambda expression** should be from a specific type. Now, **lambda expressions** accept **auto** as a valid parameter type.
+- **Generic lambda expressions**: Until **C++14** parameters of a **lambda expression** should be of a specific type. Now, **lambda expressions** accept **auto** as a valid parameter type.
 
 Example of the **initialization captures**:
 <script src="https://gist.github.com/maitesin/53cf0003e3376146e917cce0422b0330.js"></script>
@@ -53,10 +53,10 @@ The result of the execution of the previous code is:
 
 # What will be added in C++17
 The current plan is to add two new features for **lambda expressions** in **C++17**:
-- **Capture &lowast;this**: This will allow the **lambda expression** to capture the **enclosing object by copy**. This will make possible to use the safely the **lambda expression** even after the **enclosing object** has been destroyed.
+- **Capture &lowast;this**: This will allow the **lambda expression** to capture the **enclosing object by copy**. This will make possible to use safely the **lambda expression** even after the **enclosing object** has been destroyed.
 - **constexpr lambda expressions**: This will allow to call **lambda expressions** and use their result to generate ***constexpr*** objects **at compile time**.
 
-Sadly neither [GCC](https://gcc.gnu.org/projects/cxx-status.html#cxx1z) or [Clang](http://clang.llvm.org/cxx_status.html) supports them in any stable version. Therefore, **there will not be any execution of code, but there is some code that should work once the features are implemented**. The information used to do the code of this section has been found in the [C++ reference website](http://en.cppreference.com/w/cpp/language/lambda) and in [the paper for constexpr lambda expressions](https://isocpp.org/files/papers/N4487.pdf).
+Sadly neither [GCC](https://gcc.gnu.org/projects/cxx-status.html#cxx1z) or [Clang](http://clang.llvm.org/cxx_status.html) in any stable version supports them. Therefore, **there will not be any execution of code, but there is some code that should work once the features are implemented**. The information used to do the code of this section has been found in the [C++ reference website](http://en.cppreference.com/w/cpp/language/lambda) and in [the paper for constexpr lambda expressions](https://isocpp.org/files/papers/N4487.pdf).
 
 The following is an example of the **capture &lowast;this**:
 <script src="https://gist.github.com/maitesin/adcc64d30ca9ddbb8cea8c7d2466a40f.js"></script>
